@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"content="ie=edge">
+
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+    <title>React Practice</title>
+  </head>
+  <body>
+
+  <!-- Location to insert React content -->
+  <div id="app">React has not rendered yet.</div>
+  <div id="paragraph"></div>
+  <div id="google"></div>
+  <div id="list"></div>
+
+  <!-- Javascript...put this in own file for separation of concerns-->
+  <script type="text/babel">
+
+  //RENDER REACT TO THE DOM...ACCEPTS TWO ARGUMENTS (REACT WHAT, REACT WHERE)
+  ReactDOM.render(
+  // REACT WHAT - JSX
+    <h1>Hello World!</h1>,
+  //REACT WHERE -  DIV WITH ID OF "APP"
+  document.getElementById("app")
+  );
+
+  ReactDOM.render(
+    <p>I am a paragraph</p>,
+  document.getElementById("paragraph")
+  );
+
+  ReactDOM.render(
+    <a href="www.google.com">Google Homepage</a>,
+  document.getElementById("google")
+  );
+
+  ReactDOM.render(
+    <ul>
+      <li>Make tea</li>
+      <li>Dye my hair</li>
+      <li>Dont panic and grab your towel</li>
+    </ul>,
+  document.getElementById("list")
+  );
+
+
+  </script>
+
+  </body>
+
+</html>
